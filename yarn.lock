@@ -2737,6 +2737,14 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
   integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
+grosso-modo@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/grosso-modo/-/grosso-modo-4.2.0.tgz#6827b64cdae916887f55c727bb17701e1ce4b273"
+  integrity sha512-WdVgFFNr/0e+ztyH9XEvAYnNVYDAptXaDF7D0pXg/nUndVUC1EQfF8wpzZFGcWe5g+OJO5yHNJvuzslAb02HPQ==
+  dependencies:
+    norm-dist "^3.1.0"
+    walk-z "^3.0.1"
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -3040,6 +3048,11 @@ istanbul-reports@^3.1.3:
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
+
+javascript-state-machine@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/javascript-state-machine/-/javascript-state-machine-3.1.0.tgz#06eeb2136a6a19ae1b56105c25caec283dd5cd14"
+  integrity sha512-BwhYxQ1OPenBPXC735RgfB+ZUG8H3kjsx8hrYTgWnoy6TPipEy4fiicyhT2lxRKAXq9pG7CfFT8a2HLr6Hmwxg==
 
 jest-changed-files@^27.5.1:
   version "27.5.1"
@@ -3751,6 +3764,16 @@ nopt@~1.0.10:
   integrity sha1-bd0hvSoxQXuScn3Vhfim83YI6+4=
   dependencies:
     abbrev "1"
+
+norm-dist@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/norm-dist/-/norm-dist-2.0.2.tgz#77833677b24933f7438c510c99e6cd5c2ac563ec"
+  integrity sha512-5MKDFbgclvpodGwiZaADVKH9IGb7cpgIDDJX6ucY3Z76S8Zk+u9ur888VBJfGVfwFsuSEn6Lta6WZRRZuxoI5w==
+
+norm-dist@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/norm-dist/-/norm-dist-3.1.0.tgz#b663350e42a1226d937951ab5eaa2478fc4a17c1"
+  integrity sha512-Bd1Kb0Qx5eWjNxft8gWwjqTCi7LI7kvsQb3fT+JbOj++3B4mZWiOt8fpgQ8LJF+/zvT05b2HHk9EKjkqzpsD/w==
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
@@ -4700,6 +4723,13 @@ w3c-xmlserializer@^2.0.0:
   integrity sha512-4tzD0mF8iSiMiNs30BiLO3EpfGLZUT2MSX/G+o7ZywDzliWQ3OPtTZ0PTC3B3ca1UAf4cJMHB+2Bf56EriJuRA==
   dependencies:
     xml-name-validator "^3.0.0"
+
+walk-z@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/walk-z/-/walk-z-3.0.1.tgz#415d3f6418f1f74c7b255ba199078ede3e27e9e6"
+  integrity sha512-qXDZjhcKAllkdtpxOE3hTRMtysqLYnh0V13mmO7vFXFeliMs6mCrsP9KmwalLaEiMzVnkl7krDGRSEZNacGWZA==
+  dependencies:
+    norm-dist "^2.0.1"
 
 walker@^1.0.7:
   version "1.0.7"
