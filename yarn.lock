@@ -2737,14 +2737,6 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
   integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
-grosso-modo@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/grosso-modo/-/grosso-modo-4.2.0.tgz#6827b64cdae916887f55c727bb17701e1ce4b273"
-  integrity sha512-WdVgFFNr/0e+ztyH9XEvAYnNVYDAptXaDF7D0pXg/nUndVUC1EQfF8wpzZFGcWe5g+OJO5yHNJvuzslAb02HPQ==
-  dependencies:
-    norm-dist "^3.1.0"
-    walk-z "^3.0.1"
-
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -3765,16 +3757,6 @@ nopt@~1.0.10:
   dependencies:
     abbrev "1"
 
-norm-dist@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/norm-dist/-/norm-dist-2.0.2.tgz#77833677b24933f7438c510c99e6cd5c2ac563ec"
-  integrity sha512-5MKDFbgclvpodGwiZaADVKH9IGb7cpgIDDJX6ucY3Z76S8Zk+u9ur888VBJfGVfwFsuSEn6Lta6WZRRZuxoI5w==
-
-norm-dist@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/norm-dist/-/norm-dist-3.1.0.tgz#b663350e42a1226d937951ab5eaa2478fc4a17c1"
-  integrity sha512-Bd1Kb0Qx5eWjNxft8gWwjqTCi7LI7kvsQb3fT+JbOj++3B4mZWiOt8fpgQ8LJF+/zvT05b2HHk9EKjkqzpsD/w==
-
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
@@ -4015,6 +3997,13 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
+random@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/random/-/random-3.0.6.tgz#c918e9498dee461affde72986c79ac4d9ef486cf"
+  integrity sha512-B53pp/8eFBxULg6sfQgjjmy3vZ2CWVt0Nk4OgkSpvmAf3VXfcEUgGASbNWbXiTiExWe8hCIf5HlddNHzrte9jg==
+  dependencies:
+    seedrandom "^3.0.5"
+
 rc@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -4216,6 +4205,11 @@ saxes@^5.0.1:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
+
+seedrandom@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-3.0.5.tgz#54edc85c95222525b0c7a6f6b3543d8e0b3aa0a7"
+  integrity sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==
 
 semver-diff@^3.1.1:
   version "3.1.1"
@@ -4723,13 +4717,6 @@ w3c-xmlserializer@^2.0.0:
   integrity sha512-4tzD0mF8iSiMiNs30BiLO3EpfGLZUT2MSX/G+o7ZywDzliWQ3OPtTZ0PTC3B3ca1UAf4cJMHB+2Bf56EriJuRA==
   dependencies:
     xml-name-validator "^3.0.0"
-
-walk-z@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/walk-z/-/walk-z-3.0.1.tgz#415d3f6418f1f74c7b255ba199078ede3e27e9e6"
-  integrity sha512-qXDZjhcKAllkdtpxOE3hTRMtysqLYnh0V13mmO7vFXFeliMs6mCrsP9KmwalLaEiMzVnkl7krDGRSEZNacGWZA==
-  dependencies:
-    norm-dist "^2.0.1"
 
 walker@^1.0.7:
   version "1.0.7"
