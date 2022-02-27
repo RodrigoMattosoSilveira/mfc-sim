@@ -20,10 +20,12 @@ const fsm = new StateMachine({
   ],
   methods: {
     onLog:      function() { console.log('I logged in and am at the order station') },
-    onPick:      function() {
+    onPick:     function() {
       console.log('I walked to the inventory area')
-      let n = random.int(2,6);
-      console.log('I picked an order item in: ' + n + ' seconds');
+      let time_to_walk_to_inventory_area = random.int(45,60);
+      console.log('I picked an order item in: ' + time_to_walk_to_inventory_area + ' seconds');
+      let time_to_pick_item = random.int(2,6);
+      console.log('I picked an order item in: ' + time_to_pick_item + ' seconds');
     },
     onPack:      function() { console.log('I walked to the packing station') },
     onLabel:     function() { console.log('I walked to the label station') },
