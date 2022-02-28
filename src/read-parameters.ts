@@ -2,11 +2,7 @@
 const fs = require('fs');
 import {ParametersT} from './types'
 
-// export async const readParms = (): ParametersT => {
-//     let rawData = fs.readFileSync("./src/parameters.json", { encoding: "utf8", flag: "r" });
-//     return JSON.parse(rawData);
-// }
-
+//https://dev.to/starpebble/async-await-with-nodejs-file-system-1aa2#:~:text=readFile%20%28%29%20returns%20a%20promise%20to%20await%20upon,thenable.%20Try%20and%20figure%20out%20error%20handling%20yourself.
 export async function readParameters(): Promise<ParametersT> {
     const fsPromises = require('fs').promises;
     const data = await fsPromises.readFile('./src/parameters.json')
