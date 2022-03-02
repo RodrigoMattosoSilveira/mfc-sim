@@ -1,3 +1,6 @@
+import {PppDailyTally} from "./model/ppp-daily-tally";
+import {OrderTally} from "./model/order-tally";
+
 export type ParametersT = {
     ITERATIONS: number,
     SHIFT_WORK_DURATION: number,
@@ -27,4 +30,10 @@ export type ParametersT = {
     TIME_TO_WALK_TO_ORDER_STATION_MAX: number,
     TIME_TO_WAIT_BETWEEN_ORDERS_MIN: number,
     TIME_TO_WAIT_BETWEEN_ORDERS_MAX: number
+}
+
+export type JSMArgumentsT = {
+    parameters: ParametersT | null,
+    ppp: PppDailyTally | null,
+    order: OrderTally | null
 }

@@ -1,18 +1,29 @@
-import {ParametersT} from "./types";
+import {JSMArgumentsT, ParametersT} from "./types";
+import {PppDailyTally} from "./model/ppp-daily-tally";
+import {OrderTally} from "./model/order-tally";
 
 export const calculateIterationF = (fsm: any, parameters: ParametersT): void => {
-    fsm.log();
+    const jsmArguments: JSMArgumentsT = {
+        parameters:  parameters,
+        ppp: null,
+        order:  null
+    }
+    let ppp = jsmArguments.ppp;
+
+    fsm.checkin(jsmArguments);
     for (let i: number = 0; i < 10; i++) {
         // console.log(`fsm.state: I'm at the ` + fsm.state);
-        fsm.pick();
+        fsm.pick(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
-        fsm.pack();
+        fsm.pack(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
-        fsm.label();
+        fsm.label(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
-        fsm.deliver();
+        fsm.deliver(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
-        fsm.ready();
+        fsm.ready(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
     }
- }
+
+    console.log(`PPPTally, ${jsmArguments.ppp.pppId},${jsmArguments.ppp.orders},${jsmArguments.ppp.workTime}`)
+}

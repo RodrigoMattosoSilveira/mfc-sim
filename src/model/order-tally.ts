@@ -4,6 +4,7 @@ import {nanoid} from "nanoid";
 export class OrderTally {
     private _orderId: string;
     private _pppId: string;
+    private _orderTime: number;
     private _pickTime: number;
     private _packTime: number;
     private _labelTime: number;
@@ -24,6 +25,14 @@ export class OrderTally {
 
     set pppId(value: string) {
         this._pppId = value;
+    }
+
+    get orderTime(): number {
+        return this._orderTime;
+    }
+
+    set orderTime(value: number) {
+        this._orderTime = value;
     }
 
     get pickTime(): number {
@@ -69,6 +78,7 @@ export class OrderTally {
     constructor (pppId: string) {
         this.pppId = pppId;
         this.orderId = nanoid();
+        this.orderTime = 0;
         this.pickTime = 0;
         this.packTime = 0;
         this.labelTime = 0;

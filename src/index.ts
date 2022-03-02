@@ -11,7 +11,7 @@ readParameters()
         // Start the state machine
         console.log(`MFC Simulation Started`);
         parameters = resp
-        const fsm = setupNetworkRoutes(parameters);
+        const fsm = setupNetworkRoutes();
         calculateIterationF(fsm, parameters);
 
         console.log(`MFC Simulation Ended`);
