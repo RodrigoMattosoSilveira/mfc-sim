@@ -1,22 +1,13 @@
-import {IterationControlT, ParametersT} from "./types";
-import {IterationControlC} from "./interaction-control";
+import {ParametersT} from "./types";
 
 const random = require("random");
 
-export const pickF = (parameters: ParametersT, interactionControl: IterationControlC): boolean => {
+export const pickF = (parameters: ParametersT): void => {
     // walk to the inventory area
-    let pickTime: number = 0;
     let time_to_walk_to_inventory_area = random.int(parameters.TIME_TO_WALK_TO_INVENTORY_AREA_MIN,parameters.TIME_TO_WALK_TO_INVENTORY_AREA_MAX);
-    // console.log('I walked to the inventory area in: ' + time_to_walk_to_inventory_area + ' seconds');
-    pickTime += time_to_walk_to_inventory_area
+    console.log('I walked to the inventory area in: ' + time_to_walk_to_inventory_area + ' seconds');
 
     // pick an order item
     let time_to_pick_item = random.int(parameters.TIME_TO_PICK_ITEM_MIN,parameters.TIME_TO_PICK_ITEM_MAX);
-    // console.log('I picked an order item in: ' + time_to_pick_item + ' seconds');
-    pickTime += time_to_pick_item
-
-    interactionControl.pickTime += pickTime;
-    interactionControl.workTime += pickTime;
-
-    return true;
+    console.log('I picked an order item in: ' + time_to_pick_item + ' seconds');
 }

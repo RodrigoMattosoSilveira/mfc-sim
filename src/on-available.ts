@@ -1,7 +1,7 @@
-import {IterationControlT, ParametersT} from "./types";
+import {ParametersT} from "./types";
 
 const random = require("random");
 
-export const availableF = (parameters: ParametersT, interactionControl: IterationControlT): void => {
+export const availableF = (parameters: ParametersT): void => {
     console.log('I walked to the order station');
 }
