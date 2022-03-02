@@ -8,30 +8,15 @@ export const atOrderStation = (jsmArguments: JSMArgumentsT): void => {
     let p: ParametersT = jsmArguments.parameters;
 
     // Create a PPP tally, if necessary
-    if (!jsmArguments.order) {
+    if (!jsmArguments.ppp) {
         // initialize the PPP tally
         jsmArguments.ppp = new PppDailyTally(p);
         console.log(`I, ${ jsmArguments.ppp.pppId}, checked in and am at the order station`);
     }
-     // Process the order tally, if existing
-    if ( jsmArguments.order) {
-        // process the previous order
-        console.log(`OrderTally,${ jsmArguments.order.orderId},${ jsmArguments.order.orderTime},${ jsmArguments.order.pickTime},${ jsmArguments.order.packTime},${ jsmArguments.order.labelTime},${ jsmArguments.order.deliveryTime}`)
 
-        let orderWorkTime: number = 0;
-        orderWorkTime += jsmArguments.order.orderTime;
-        orderWorkTime += jsmArguments.order.pickTime;
-        orderWorkTime += jsmArguments.order.packTime;
-        orderWorkTime += jsmArguments.order.labelTime;
-        orderWorkTime += jsmArguments.order.deliveryTime;
+    // Destroy existing order, if it exists, and get a new order tally
+    if (jsmArguments.order)  { delete jsmArguments.order }
 
-        jsmArguments.ppp.orders++;
-        jsmArguments.ppp.workTime += orderWorkTime;
-        // Destroy the previous order
-        delete jsmArguments.order;
-    }
-
-    // Get an order tally
     jsmArguments.order = new OrderTally(jsmArguments.ppp.pppId);
     jsmArguments.order.orderId = nanoid();
 
