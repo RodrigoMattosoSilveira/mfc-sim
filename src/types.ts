@@ -4,6 +4,7 @@ import {OrderTally} from "./model/order-tally";
 export type ParametersT = {
     ITERATIONS: number,
     SHIFT_WORK_DURATION: number,
+    SHIFT_BREAKS_PER_SHIFT: number,
     SHIFT_BREAK_DURATION: number,
     HOUR_BREAK_DURATION: number,
     TIME_TO_WALK_TO_INVENTORY_AREA_MIN: number,

@@ -15,9 +15,6 @@ export const atDeliveryStation = (jsmArguments: JSMArgumentsT): void => {
     jsmArguments.order.deliveryTime += time_to_place_order;
     // console.log('I placed the order in the delivery area in: ' + time_to_place_order + ' seconds');
 
-    //  The PPP is done with this order, record the order
-    console.log(`OrderTally,${ jsmArguments.order.orderId},${ jsmArguments.order.orderTime},${ jsmArguments.order.pickTime},${ jsmArguments.order.packTime},${ jsmArguments.order.labelTime},${ jsmArguments.order.deliveryTime}`)
-
     // The PPP PnO this order. Update the PPP tally
     let orderWorkTime: number = 0;
     jsmArguments.ppp.orders++;
@@ -26,5 +23,9 @@ export const atDeliveryStation = (jsmArguments: JSMArgumentsT): void => {
     orderWorkTime += jsmArguments.order.packTime;
     orderWorkTime += jsmArguments.order.labelTime;
     orderWorkTime += jsmArguments.order.deliveryTime;
+    jsmArguments.order.workTime = orderWorkTime;
     jsmArguments.ppp.workTime += orderWorkTime;
+
+    //  The PPP is done with this order, record the order
+    console.log(`OrderTally,${ jsmArguments.order.orderId},${ jsmArguments.order.orderTime},${ jsmArguments.order.pickTime},${ jsmArguments.order.packTime},${ jsmArguments.order.labelTime},${ jsmArguments.order.deliveryTime},${ jsmArguments.order.workTime}`)
 }

@@ -10,6 +10,15 @@ export class OrderTally {
     private _labelTime: number;
     private _deliveryTime: number;
     private _readyTime: number;
+    private _workTime: number;
+
+    get workTime(): number {
+        return this._workTime;
+    }
+
+    set workTime(value: number) {
+        this._workTime = value;
+    }
 
     get orderId(): string {
         return this._orderId;
@@ -84,5 +93,6 @@ export class OrderTally {
         this.labelTime = 0;
         this.deliveryTime = 0;
         this.readyTime = 0;
+        this.workTime = 0;
     }
 }

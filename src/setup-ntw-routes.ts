@@ -25,7 +25,7 @@ export const setupNetworkRoutes = (): any => {
         onPack:      function(lifecycle: any, jsmArguments: JSMArgumentsT) { atPackStatiom(jsmArguments); },
         onLabel:     function(lifecycle: any, jsmArguments: JSMArgumentsT) { atLabelStation(jsmArguments) },
         onDeliver:   function(lifecycle: any, jsmArguments: JSMArgumentsT) { atDeliveryStation(jsmArguments) },
-        onReady:     function(lifecycle: any, jsmArguments: JSMArgumentsT) { atOrderStation(jsmArguments) },
+        onReady:     function(lifecycle: any, jsmArguments: JSMArgumentsT) { return atOrderStation(jsmArguments) },
       }
     });
 }

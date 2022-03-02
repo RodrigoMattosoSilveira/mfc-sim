@@ -5,8 +5,8 @@ export class PppDailyTally {
     private _pppId: string;
     private _orders: number;
     private _workTime: number;
-    private _hourBreaTotalTime: number;
-    private _shiftBreakTotalTime: number;
+    private _hourBreakDuration: number;
+    private _shiftBreakDuration: number;
     private _nextHourBreak: number;
     private _nextShiftBreak: number;
 
@@ -34,20 +34,20 @@ export class PppDailyTally {
         this._workTime = value;
     }
 
-    get hourBreaTotalTime(): number {
-        return this._hourBreaTotalTime;
+    get hourBreakDuration(): number {
+        return this._hourBreakDuration;
     }
 
-    set hourBreaTotalTime(value: number) {
-        this._hourBreaTotalTime = value;
+    set hourBreakDuration(value: number) {
+        this._hourBreakDuration = value;
     }
 
-    get shiftBreakTotalTime(): number {
-        return this._shiftBreakTotalTime;
+    get shiftBreakDuration(): number {
+        return this._shiftBreakDuration;
     }
 
-    set shiftBreakTotalTime(value: number) {
-        this._shiftBreakTotalTime = value;
+    set shiftBreakDuration(value: number) {
+        this._shiftBreakDuration = value;
     }
 
     get nextHourBreak(): number {
@@ -70,9 +70,9 @@ export class PppDailyTally {
         this.pppId = nanoid();
         this._orders = 0;
         this.workTime = 0;
-        this.hourBreaTotalTime = 0;
-        this.shiftBreakTotalTime = 0;
+        this.hourBreakDuration = 0;
+        this.shiftBreakDuration = 0;
         this.nextHourBreak = 3600 - parameters.HOUR_BREAK_DURATION;
-        this.nextShiftBreak = parameters.SHIFT_WORK_DURATION/2;
+        this.nextShiftBreak = parameters.SHIFT_WORK_DURATION/parameters.SHIFT_BREAKS_PER_SHIFT;
     }
 }

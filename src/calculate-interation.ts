@@ -1,6 +1,4 @@
 import {JSMArgumentsT, ParametersT} from "./types";
-import {PppDailyTally} from "./model/ppp-daily-tally";
-import {OrderTally} from "./model/order-tally";
 
 export const calculateIterationF = (fsm: any, parameters: ParametersT): void => {
     const jsmArguments: JSMArgumentsT = {
@@ -8,10 +6,9 @@ export const calculateIterationF = (fsm: any, parameters: ParametersT): void => 
         ppp: null,
         order:  null
     }
-    let ppp = jsmArguments.ppp;
 
     fsm.checkin(jsmArguments);
-    for (let i: number = 0; i < 10; i++) {
+    for (let i: number = 0; i < 200; i++) {
         // console.log(`fsm.state: I'm at the ` + fsm.state);
         fsm.pick(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
@@ -21,7 +18,7 @@ export const calculateIterationF = (fsm: any, parameters: ParametersT): void => 
         // console.log(`fsm.state: I'm at the ` + fsm.state);
         fsm.deliver(jsmArguments);
         // console.log(`fsm.state: I'm at the ` + fsm.state);
-        fsm.ready(jsmArguments);
+        if (!fsm.ready(jsmArguments)) {break;}
         // console.log(`fsm.state: I'm at the ` + fsm.state);
     }
 
