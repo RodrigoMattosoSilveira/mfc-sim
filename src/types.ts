@@ -30,7 +30,9 @@ export type ParametersT = {
     TIME_TO_WALK_TO_ORDER_STATION_MIN: number,
     TIME_TO_WALK_TO_ORDER_STATION_MAX: number,
     TIME_TO_WAIT_BETWEEN_ORDERS_MIN: number,
-    TIME_TO_WAIT_BETWEEN_ORDERS_MAX: number
+    TIME_TO_WAIT_BETWEEN_ORDERS_MAX: number,
+    ORDER_ITEMS_MIN: number,
+    ORDER_ITEMS_MAX: number
 }
 
 export type JSMArgumentsT = {
