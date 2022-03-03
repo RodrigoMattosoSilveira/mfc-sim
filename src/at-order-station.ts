@@ -42,6 +42,7 @@ export const atOrderStation = (jsmArguments: JSMArgumentsT): boolean => {
 
     jsmArguments.order = new OrderTally(jsmArguments.ppp.pppId);
     jsmArguments.order.orderId = nanoid();
+    jsmArguments.order.items = calculateRandomOrderItems(); // TODO this is a hack, ask someone who knows it to help me
 
     // walk to the order station
     let time_to_walk_to_order_station = random.int(p.TIME_TO_WALK_TO_ORDER_STATION_MIN,p.TIME_TO_WALK_TO_ORDER_STATION_MAX);
@@ -54,4 +55,19 @@ export const atOrderStation = (jsmArguments: JSMArgumentsT): boolean => {
     // console.log('I was read for the next order in: ' + time_to_wait_between_orders + ' seconds');
 
     return true;
+}
+// TODO this is a hack, ask someone who knows it to help me select the correct method
+const calculateRandomOrderItems = (): number => {
+    let rnd = random.pareto(1.160964)();
+    let orderItems = Math.floor(random.pareto(1.160964)());
+    if (orderItems > 12 ) {
+        orderItems = 12
+    } else {
+        if (orderItems > 3 && orderItems < 12) {
+            orderItems = 6
+        } else {
+            orderItems = 1
+        }
+    }
+    return orderItems;
 }

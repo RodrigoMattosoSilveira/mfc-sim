@@ -1,4 +1,3 @@
-import pp = jasmine.pp;
 import {nanoid} from "nanoid";
 
 export class OrderTally {
@@ -11,6 +10,15 @@ export class OrderTally {
     private _deliveryTime: number;
     private _readyTime: number;
     private _workTime: number;
+    private _items: number;
+
+    get items(): number {
+        return this._items;
+    }
+
+    set items(value: number) {
+        this._items = value;
+    }
 
     get workTime(): number {
         return this._workTime;
@@ -94,5 +102,6 @@ export class OrderTally {
         this.deliveryTime = 0;
         this.readyTime = 0;
         this.workTime = 0;
+        this.items = 0
     }
 }
