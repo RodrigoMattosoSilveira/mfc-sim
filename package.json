@@ -1,7 +1,11 @@
 {
-  "name": "typescript-nodejs-template",
-  "version": "1.0.0",
-  "description": "A simple template for typescript Node.js project",
+  "name": "mfc-simulation",
+  "description": "A PnP MFC simulator",
+  "version": "0.0.1",
+  "repository": "git@github.com:RodrigoMattosoSilveira/mfc-sim.git",
+  "keywords": [],
+  "author": "Rodrigo Silveira",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "start": "yarn serve",
@@ -13,9 +17,6 @@
     "watch-ts": "tsc -w",
     "test": "NODE_ENV=test jest --detectOpenHandles"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "javascript-state-machine": "^3.1.0",
     "nanoid": "^3.3.1",
