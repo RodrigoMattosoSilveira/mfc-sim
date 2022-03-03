@@ -1,3 +1,4 @@
+import {promises as fsPromises} from "fs";
 
 const fs = require('fs');
 import {ParametersT} from './types'
@@ -11,3 +12,8 @@ export async function readParameters(): Promise<ParametersT> {
 
     return JSON.parse(data.toString());
 }
+
+// TODO use this pattern to get rid of the promisses above
+// export const readSomething = async () => {
+//
+// }

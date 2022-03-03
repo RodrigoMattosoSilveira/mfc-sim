@@ -27,5 +27,5 @@ export const atDeliveryStation = (jsmArguments: JSMArgumentsT): void => {
     jsmArguments.ppp.workTime += orderWorkTime;
 
     //  The PPP is done with this order, record the order
-    console.log(`OrderTally,${ jsmArguments.order.orderId},${ jsmArguments.order.orderTime},${ jsmArguments.order.pickTime},${ jsmArguments.order.packTime},${ jsmArguments.order.labelTime},${ jsmArguments.order.deliveryTime},${ jsmArguments.order.workTime}`)
+    // console.log(`OrderTally,${ jsmArguments.order.orderId},${ jsmArguments.order.orderTime},${ jsmArguments.order.pickTime},${ jsmArguments.order.packTime},${ jsmArguments.order.labelTime},${ jsmArguments.order.deliveryTime},${ jsmArguments.order.workTime}`)
 }
